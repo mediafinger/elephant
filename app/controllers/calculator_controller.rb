@@ -4,6 +4,7 @@ class CalculatorController < ApplicationController
   end
 
   def create
+    @items = params[:items]
   end
 
 end

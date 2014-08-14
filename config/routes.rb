@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :calculator, only: [:new, :create]
+  get "calculator/new" => "calculator#new"
+  post "calculator"    => "calculator#create"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
