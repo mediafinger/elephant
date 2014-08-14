@@ -19,10 +19,16 @@ class CalculatorController < ApplicationController
   end
 
   def grant_discount(sum)
-    if sum > 100
+    if sum >= 10.000
+      sum * 0.9
+    elsif sum >= 3000
+      sum * 0.93
+    elsif sum >= 1000
+      sum * 0.95
+    elsif sum > 500
+      sum * 0.97
+    elsif sum > 100
       sum * 0.98
-    else
-      sum
     end
   end
 
