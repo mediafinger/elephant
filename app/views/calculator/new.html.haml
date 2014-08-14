@@ -1,12 +1,14 @@
 = form_tag calculator_path do
-  Items
-  = number_field_tag 'items'
+  %p
+    Items
+    = number_field_tag 'items'
 
-  Price per item
-  = number_field_tag 'price_per_item'
+  %p
+    Price per item
+    = number_field_tag 'price_per_item'
 
-  Tax you have to pay
-  = text_field_tag 'cc'
-
+  %p
+    In which country you want to pay tax?
+    = text_field_tag 'cc'
 
   = submit_tag "How much do I have to pay?"

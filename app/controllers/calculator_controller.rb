@@ -23,6 +23,14 @@ class CalculatorController < ApplicationController
     case cc
     when "es"
       21
+    when "de"
+      19
+    when "fr"
+      12
+    when "no"
+      35
+    when "it"
+      20
     else
       0
     end
