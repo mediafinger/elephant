@@ -6,7 +6,9 @@ class CalculatorController < ApplicationController
   def create
     @items          = params[:items].to_i
     @price_per_item = params[:price_per_item].to_i
-    @tax            = params[:tax].to_i
+
+
+    @tax            = set_tax(params[:cc])
 
     @total_amount = calculate_price
   end
@@ -15,6 +17,16 @@ class CalculatorController < ApplicationController
 
   def calculate_price
     (@items * @price_per_item) * (1 + @tax.to_f/100)
+  end
+
+  def set_tax(cc)
+    case cc
+    when "es"
+      21
+    else
+      0
+    end
+
   end
 
 end
