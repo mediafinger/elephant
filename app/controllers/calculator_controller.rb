@@ -7,7 +7,6 @@ class CalculatorController < ApplicationController
     @items          = params[:items].to_i
     @price_per_item = params[:price_per_item].to_i
 
-
     @tax            = set_tax(params[:cc])
 
     @total_amount = calculate_price
@@ -16,7 +15,15 @@ class CalculatorController < ApplicationController
   private
 
   def calculate_price
-    (@items * @price_per_item) * (1 + @tax.to_f/100)
+    grant_discount(@items * @price_per_item) * (1 + @tax.to_f/100)
+  end
+
+  def grant_discount(sum)
+    if sum > 100
+      sum * 0.98
+    else
+      sum
+    end
   end
 
   def set_tax(cc)
@@ -34,7 +41,6 @@ class CalculatorController < ApplicationController
     else
       0
     end
-
   end
 
 end
