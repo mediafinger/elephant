@@ -1,3 +1,8 @@
 = form_tag calculator_path do
   Items
   = number_field_tag 'items'
+
+  Price per item
+  = number_field_tag 'price_per_item'
+
+  = submit_tag "How much do I have to pay?"
