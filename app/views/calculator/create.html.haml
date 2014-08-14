@@ -1,7 +1,13 @@
-Items entered:
-= @items
+%p
+  Items entered:
+  = @items
 
-Price per Item:
-= @price_per_item
+%p
+  Price per Item:
+  = @price_per_item
+
+%p
+  You have to pay:
+  = @total_amount
 
 = link_to "You look great!", calculator_new_path
