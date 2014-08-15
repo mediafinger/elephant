@@ -33,7 +33,7 @@ class CalculatorController < ApplicationController
   end
 
   def set_tax(cc)
-    case cc
+    case cc.to_s.downcase
     when "es"
       21
     when "de"
@@ -45,7 +45,7 @@ class CalculatorController < ApplicationController
     when "it"
       20
     else
-      0
+      raise "This country code is not supported"  # TODO handle exception
     end
   end
 
