@@ -1,7 +1,9 @@
-## README
+# README
 
-Instead of starting a new app with `rails new name` copy / clone this app
-and in a first step rename every `Xxx`, `xxx` and `XXX` with the name of your new app.
+This repo does just serve as a reference. Check the commits only after you made the exercise. Have your steps been small enough? Did you make many commits?
 
-The advantage is, that some gems we use are already included,
-while some generators and some directorys we don't need were removed.
+
+## Elephant Carpaccio
+
+Facilitation guide: <https://docs.google.com/document/d/1TCuuu-8Mm14oxsOnlk8DqfZAA1cvtYu9WGv67Yj_sSk/pub>
+
